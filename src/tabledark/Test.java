@@ -6,6 +6,7 @@
 package tabledark;
 
 import java.awt.Color;
+import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -21,6 +22,14 @@ public class Test extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(new Color(30, 30, 30));
         tableDark1.fixTable(jScrollPane1);
+        tableDark1.setColumnAlignment(0, JLabel.CENTER);
+        tableDark1.setCellAlignment(0, JLabel.CENTER);
+        tableDark1.setColumnAlignment(2, JLabel.CENTER);
+        tableDark1.setCellAlignment(2, JLabel.CENTER);
+        tableDark1.setColumnAlignment(4, JLabel.RIGHT);
+        tableDark1.setCellAlignment(4, JLabel.RIGHT);
+        tableDark1.setColumnWidth(0, 50);
+        tableDark1.setColumnWidth(2, 100);
         DefaultTableModel mode = (DefaultTableModel) tableDark1.getModel();
         for (int i = 1; i <= 20; i++) {
             mode.addRow(new Object[]{i, "Ra Ven", 10, "001 001 001", "PP"});
